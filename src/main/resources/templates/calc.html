@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<a href="/logout" style="margin-left: 1100px; text-decoration: none" >logout</a>
+<a href="/history" style="margin-left: 1100px; text-decoration: none" >history</a>
+<form action="/calc" method="post" style="margin-top: 150px;">
+    <center>
+        <h1>Calculator</h1>
+    <input type="text" name="op" style="width: 1200px; height: 30px;"><br><br>
+    <input type="submit" value="calculate" style="border-radius: 20px;">
+    <p class="result" th:text="${result}">
+    </center>
+</form>
+
+<div>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>History</title>
+</head>
+<body>
+<a href="/calc" style="margin-bottom: 60px;">Back</a>
+<a href="/logout" style="margin-left: 1100px; text-decoration: none" >logout</a>
+<center>
+<table class="table table-hover " style="border: 1px solid black;">
+    <h3>History</h3>
+
+    <thead class="thead-inverse">
+    <tr>
+        <th>User</th>
+        <th>Operation</th>
+        <th>Result</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="op : ${ops}">
+        <td th:text="${op.getUsername()}"></td>
+        <td th:text="${op.getOperation()}"></td>
+        <td th:text="${op.getRes()}"></td>
+        <!--            <td th:text="${group.getUsers_g()}">Members</td>-->
+        <!--            <td><a th:href="@{'/join/'+ ${group.getId()}}" style="color: white; text-decoration: none">Join</a></td>-->
+    </tr>
+    </tbody>
+</table>
+    </center>
+</body>
+</html>
